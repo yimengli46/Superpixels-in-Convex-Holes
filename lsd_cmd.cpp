@@ -51,12 +51,12 @@ int my_lsd_main(string img_name)
   }
 
 
-  cout << "X = " << X << "Y = " << Y << endl;
+  //cout << "X = " << X << "Y = " << Y << endl;
   /* execute LSD */
   segs = LineSegmentDetection(&n, image, X, Y, 0.50, 0.6, 2.0, 22.50, 0.0, 0.70, 7.0, 0, -1.0, 1024, 0, NULL, &regX, &regY, 0.0, 5.0);
 
   output = fopen("lsd-result.txt", "w");
-  cout << "n = " << n << endl;
+  //cout << "n = " << n << endl;
   //if( output == NULL ) error("Error: unable to open ASCII output file.");
   for(i=0;i<n;i++)
     {

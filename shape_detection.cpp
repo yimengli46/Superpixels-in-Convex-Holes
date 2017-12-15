@@ -147,10 +147,9 @@ int shape_detection_main(string input_name)
 		//tree.insert(seg);
 		N_seg ++;
 	}
-	cout << "N_seg = " << N_seg << endl;
+	//cout << "N_seg = " << N_seg << endl;
 	sort(segs.begin(), segs.end(), segment_comparator1);
-	std::cout << "sqdist(Segment_2(p,q), m) = "
-            << CGAL::squared_distance(segs[0], segs[1]) << std::endl;
+	//std::cout << "sqdist(Segment_2(p,q), m) = " << CGAL::squared_distance(segs[0], segs[1]) << std::endl;
 
     Mat img = imread(input_name.c_str(), 1);
     cv::Mat img1 = Mat::zeros( Size(560, 425), CV_8UC3 );
@@ -210,7 +209,7 @@ int shape_detection_main(string input_name)
     	}
     }
 
-    printf("\nThe Adjacency List-\n");
+    //printf("\nThe Adjacency List-\n");
     // Printing Adjacency List
     /*
     for (int i = 1; i < adjacencyList.size(); ++i) {
@@ -240,7 +239,7 @@ int shape_detection_main(string input_name)
 
 	for(int r = 0; r < 3; r++)
 	{
-		cout << "round = " << r << "*********************" << endl;
+		//cout << "round = " << r << "*********************" << endl;
 		// merging
 		// check if two adjacent segments are collinear and distance < 0.5 eps
 		vector<pair<int, int> > merged_seg_pairs;
@@ -264,7 +263,7 @@ int shape_detection_main(string input_name)
 							//cout << "temp smaller than eps: " << temp_bool << endl;
 							if (temp < 0.5 * eps && bool_collinear > 0)
 							{
-								printf("merge i = %d, i2 = %d\n", i, i2);
+								//printf("merge i = %d, i2 = %d\n", i, i2);
 								segs_bool[i2] = false;
 								merged_seg_pairs.push_back(make_pair(i, i2));
 								Scalar color = Scalar(rng.uniform(0,255), rng.uniform(0, 255), rng.uniform(0, 255));
@@ -340,7 +339,7 @@ int shape_detection_main(string input_name)
 							bool bool_parallel = near_parallel(segs[i], segs[i2]);
 							if (bool_parallel)
 							{
-								printf("parallel i = %d, i2 = %d\n", i, i2);
+								//printf("parallel i = %d, i2 = %d\n", i, i2);
 								segs_bool[i2] = false;
 								removed_seg_pairs.push_back(make_pair(i, i2));
 								Scalar color = Scalar(rng.uniform(0,255), rng.uniform(0, 255), rng.uniform(0, 255));

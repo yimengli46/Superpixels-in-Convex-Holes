@@ -149,7 +149,7 @@ int voronoi_diagram_main(string input_name, float input_eps)
 		//tree.insert(seg);
 		N_seg ++;
 	}
-	cout << "N_seg = " << N_seg << endl;
+	//cout << "N_seg = " << N_seg << endl;
 	sort(segs.begin(), segs.end(), segment_comparator);
 
 	Mat img = imread(input_name.c_str(), 1);
@@ -191,7 +191,7 @@ int voronoi_diagram_main(string input_name, float input_eps)
     		float temp = CGAL::squared_distance(segs[i], segs[j]);
     		if(temp < eps)
     		{
-    			printf("p = %d, q = %d, dis = %f\n", i, j, temp);
+    			//printf("p = %d, q = %d, dis = %f\n", i, j, temp);
     			adjacencyList[i].push_back(j);
     			adjacency_bool[i] = true;
     			adjacency_bool[j] = true;
@@ -199,7 +199,7 @@ int voronoi_diagram_main(string input_name, float input_eps)
     	}
     }
 
-    printf("\nThe Adjacency List-\n");
+    //printf("\nThe Adjacency List-\n");
     // Printing Adjacency List
     /*
     for (int i = 1; i < adjacencyList.size(); ++i) {
