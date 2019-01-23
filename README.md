@@ -1,4 +1,5 @@
-This is the code for CS633 final project, Voronoi based image segmentation.  
+This repository is an C++ implementation for paper '[Image partitioning into convex polygons](https://hal.inria.fr/hal-01140320/document)'.  
+
 To test the code, make sure that you have OpenCV, CGAL and Boost properly installed on your machine.
 
 To compile the code, I suggest to use CMake.  
