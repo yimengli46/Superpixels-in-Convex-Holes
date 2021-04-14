@@ -1,4 +1,8 @@
+
+# Image Partitioning into Convex Polygons
 This repository is an C++ implementation for paper '[Image partitioning into convex polygons](https://hal.inria.fr/hal-01140320/document)'.  
+
+![Title Image](https://github.com/yimengli46/Superpixels-in-Convex-Holes/blob/master/figures/overview.png)
 
 To test the code, make sure that you have OpenCV, CGAL and Boost properly installed on your machine.
 
@@ -24,3 +28,5 @@ To test, simply run this command
 $ ./convex_hull_segmentation ../test_imgs/0001.png 40.0.  
 ```
 You will see the result image and all the intermediate results show up in the build folder.  
+
+![Results](https://github.com/yimengli46/Superpixels-in-Convex-Holes/blob/master/figures/combination.png)
